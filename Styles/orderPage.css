@@ -1,0 +1,109 @@
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .column {
+    width: 50%;
+    padding: 0 10px;
+  }
+  
+  .row {margin: 0 -5px;}
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+  .card {
+  margin-top: 25px;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-header {
+    background-color:#212529;
+    color: white;
+  }
+
+  .card-body {
+        padding: 20px !important; 
+        font-size: large;
+    }
+  
+  
+  #nameAddress {
+    margin-left: 150px;
+  }
+  
+  
+  
+  .listItems {
+    min-height: 720px;
+  }
+  
+  .menu {
+    min-height: 600px;
+  }
+  
+  #category {
+      font-size: large;
+  }
+  
+  #fried {
+    margin-right: 40px;
+  }
+  
+  
+  #peri {
+    margin-right: 40px;
+  }
+  
+  #periMenu {
+    margin-top: 10px;
+  }
+  
+  #friedMenu {
+  margin-top: 10px;
+  }
+  
+  #roastMenu {
+    margin-top: 10px;
+  }
+  
+  #burgerMenu {
+    margin-top: 10px;
+  }
+  
+  #totalCard{
+    font-size: 3rem;
+    text-align: end; 
+    background-color:darkgrey;
+    color: gold;
+  }
+  
+  input[type='checkbox'] { 
+  
+    height: 30px;
+    width: 30px;
+   }
+  
+  .food {
+  
+    width: 40px; 
+    float: right;
+    height: 40px; 
+    margin-right: 10px;
+  }
