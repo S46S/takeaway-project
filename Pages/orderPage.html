@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Styles/orderPage.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-dark bg-dark p-0" style="height: 50px;">
+    <span class="navbar-brand mb-0 h1 p-3 ms-auto">
+        <span id="user" class="badge badge-success" style="background-color:cadetblue;"></span>
+    </span>
+  </nav>
+  
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col-8 d-flex">
+        <div class="card flex-fill">
+            <div class="card-header"> 
+              Name Order-Number
+            </div>
+            <div class="card-body" style=" padding: 10px !important;">
+              <div class="form-group">
+          <textarea type="textArea" id="recieved" class="form-control" style="height: 101px;" autocomplete="off" readonly></textarea>
+          </div>
+        </div>
+        </div>
+        </div>
+
+      <div class="col-4 d-flex">
+        <div class="card flex-fill" id="totalcost">
+          <div class="card-header"> 
+            Total
+          </div>
+          <div class="card-body" id="totalCard">
+            <label>£</label>
+            <label id="total">0.00</label>
+        </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+
+     <div class="col-8" >
+        <div class="col-12">
+        <div class="card">
+          <div class="card-header"> 
+            Category
+          </div>
+          <div id="category" class="card-body">
+            <input class="form-check-input" id="periButton" type="radio" name="flexRadioDefault">
+            <label class="form-check-label" id="peri" for="category">
+              Peri Peri
+            </label>
+            <input class="form-check-input" id="friedButton" type="radio" name="flexRadioDefault">
+            <label class="form-check-label" id="fried" for="category">
+              Fried Chicken
+            </label>
+            <input class="form-check-input" id="burgerButton" type="radio" name="flexRadioDefault">
+            <label class="form-check-label" id="burger" for="category">
+              Burgers
+            </label>
+          </div>
+        </div>
+      </div>
+	  <div class="col-12" >
+        <div class="card menu" id="menu">
+          <div class="card-header"> 
+            Menu
+          </div>
+          <div id="periMenu" class="card-body" style="display: none;">
+            <div class="card">
+            <div class="card-body form-check-label form-control div" id="first">
+            <span id="firstLabel" > Whole Chicken </span>
+            <input  type="numeric"  value="1" class="form-control food" id="firstQuantity">
+            <input  type="checkbox" value="" class="food form-check-input" id="firstCheckbox" data-price="20.99">
+            <label class="form-check-label "  for="periMenu">
+              £20.99
+            </label> <br> </br>
+            </div>
+          </div>      
+
+            <div class="card">
+            <div class="card-body div" id="second">
+            <span id="secondLabel" >Quarter Chicken</span>
+            <input  type="numeric"  value="1" class="form-control food" id="secondQuantity" >
+            <input  type="checkbox" value="" class="food form-check-input" id="secondCheckbox" data-price="1.99">
+            <label class="form-check-label"  for="periMenu">
+              £1.99
+            </label> <br> </br>
+            </div>
+          </div>
+
+            <div class="card">
+            <div class="card-body div" id="third">
+            <span id="thirdLabel" >Wings (6pc)</span>
+            <input  type="numeric"  value="1" class="form-control food" id="thirdQuantity" >
+            <input  type="checkbox" value="" class="food form-check-input" id="thirdCheckbox" data-price="1.99">
+            <label class="form-check-label"  for="periMenu">
+                £1.99
+            </label> <br> </br>
+            </div>
+          </div>
+
+            <div class="card">
+            <div class="card-body div" id="forth">
+              <span id="forthLabel">Lamb Chops (4pc)</span>
+              <input  type="numeric"  value="1" class="form-control food" id="forthQuantity" >
+              <input  type="checkbox" value="" class="food form-check-input" id="forthCheckbox" data-price="1.99">
+              <label class="form-check-label"  for="periMenu">
+                 £1.99
+              </label> <br> </br>
+            </div>
+          </div>
+
+            <div class="card">
+            <div class="card-body div" id="five">
+              <span id="fiveLabel">Mixed Grill</span>
+              <input  type="numeric"  value="1" class="form-control food" id="fiveQuantity" >
+              <input  type="checkbox" value="" class="food form-check-input" id="fiveCheckbox" data-price="1.99">
+              <label class="form-check-label"  for="periMenu">
+                 £1.99
+              </label> <br> </br>
+            </div>
+          </div>
+
+            <div class="card">
+            <div class="card-body div" id="six">
+              <span id="sixLabel">Mega Mixed Grill</span>
+              <input  type="numeric"  value="1" class="form-control food" id="sixQuantity" >
+              <input  type="checkbox" value="" class="food form-check-input" id="sixCheckbox" data-price="1.99">
+              <label class="form-check-label"  for="periMenu">
+                 £1.99
+              </label> <br> </br>
+            </div>
+            </div>
+
+            <div class="card">
+            <div class="card-body div" id="seven">
+              <span id="sevenLabel">Lamb Ribs (5pcs)</span>
+              <input  type="numeric"  value="1" class="form-control food" id="sevenQuantity" >
+              <input  type="checkbox" value="" class="food form-check-input" id="sevenCheckbox" data-price="1.99">
+              <label class="form-check-label"  for="periMenu">
+                £1.99
+              </label> <br> </br>
+             </div>
+          </div>
+        </div>
+
+          <div id="friedMenu" class="card-body" style="display: none;">
+            <div class="card">
+            <div class="card-body div" id="1pc">
+            <span id="1pcLabel">1pc Chicken</span>
+            <input type="numeric"  value="1" class="form-control food" id="1pcQuantity" >
+            <input type="checkbox" value="" class="food form-check-input" id="1pcCheckbox" data-price="1.99">
+            <label class="form-check-label" for="friedMenu">
+              £1.99
+            </label> <br> </br>
+          </div>
+          </div>
+
+          <div class="card">
+          <div class="card-body div" id="1pcChips">
+            <span id="1pcChipsLabel">1pc Chicken & Chips</span>
+            <input type="numeric"  value="1" class="form-control food" id="1pcChipsQuantity" >
+            <input type="checkbox" value="" class="food form-check-input" id="1pcChipsCheckbox" data-price="1.99">
+            <label class="form-check-label" for="friedMenu">
+              £1.99
+            </label> <br> </br>
+          </div>
+        </div>
+
+          <div class="card">
+            <div class="card-body div" id="2pc">
+            <span id="2pcLabel">2pc Chicken & Chips</span>
+            <input type="numeric"  value="1"class="form-control food" id="2pcQuantity" >
+            <input type="checkbox" value="" class="food form-check-input" id="2pcCheckbox" data-price="1.99">
+            <label class="form-check-label" for="friedMenu">
+              £1.99
+            </label> <br> </br>
+          </div>
+        </div>
+
+          <div class="card">
+            <div class="card-body div" id="3pc">
+            <span id="3pcLabel">3pc Chicken & Chips</span>
+            <input type="numeric"  value="1" class="form-control food" id="3pcQuantity" >
+            <input type="checkbox" value="" class="food form-check-input" id="3pcCheckbox" data-price="1.99">
+            <label class="form-check-label" for="friedMenu">
+              £1.99
+            </label> <br> </br>
+          </div>
+        </div>
+
+          <div class="card">
+            <div class="card-body div" id="6pc">
+            <span id="6pcLabel">6pc Chicken & 2 Chip</span>
+            <input type="numeric"  value="1" class="form-control food" id="6pcQuantity" >
+            <input type="checkbox" value="" class="food form-check-input" id="6pcCheckbox" data-price="1.99">
+            <label class="form-check-label"  for="friedMenu">
+              £1.99
+            </label> <br> </br>
+          </div>
+        </div>
+
+          <div class="card">
+            <div class="card-body div" id="8pc">
+            <span id="8pcLabel">8pc Chicken & 3 Chips</span>
+            <input type="numeric"  value="1" class="form-control food" id="8pcQuantity">
+            <input type="checkbox" value="" class="food form-check-input" id="8pcCheckbox" data-price="1.99">
+            <label class="form-check-label" for="friedMenu">
+              £1.99
+            </label> <br> </br>
+          </div>
+        </div>
+
+          <div class="card">
+            <div class="card-body div" id="10pc">
+            <span id="10pcLabel">10pc Chicken & 4 Chips</span>
+            <input type="numeric"  value="1"class="form-control food" id="10pcQuantity" >
+            <input type="checkbox" value="" class="food form-check-input" id="10pcCheckbox" data-price="1.99">
+            <label class="form-check-label" for="friedMenu">
+              £1.99
+            </label> <br> </br>
+          </div>
+        </div>
+        </div>
+
+
+          <div id="burgerMenu" class="card-body" style="display: none;">
+            <div class="card">
+            <div class="card-body div" id="naga">
+            <span id="nagaLabel">Naga Burger</span>
+            <input type="numeric"  value="1" class="form-control food" id="nagaQuantity">
+            <input type="checkbox" value="" class="food form-check-input" id="nagaCheckbox" data-price="1.99">
+            <label class="form-check-label" for="burgerMenu">
+              £1.99
+            </label> <br> </br>
+            </div>
+          </div>
+
+            <div class="card">
+            <div class="card-body div" id="cheese">
+            <span id="cheeseLabel">Cheese Burger</span>
+            <input  type="numeric"  value="1" class="form-control food" id="cheeseQuantity" >
+            <input type="checkbox" value="" class="food form-check-input" id="cheeseCheckbox" data-price="1.99">
+            <label class="form-check-label" for="burgerMenu">
+              £1.99
+            </label> <br> </br>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body div" id="veggie">
+            <span id="veggieLabel">Veggie Burger</span>
+            <input type="numeric"  value="1" class="form-control food" id="veggieQuantity" >
+            <input type="checkbox" value="" class="food form-check-input" id="veggieCheckbox" data-price="1.99">
+            <label class="form-check-label" for="burgerMenu">
+              £1.99
+            </label> <br> </br>
+           </div>
+          </div>
+
+           <div class="card">
+            <div class="card-body div" id="bigStack">
+            <span id="bigStackLabel">Big Stack</span>
+            <input  type="numeric"  value="1" class="form-control food" id="bigStackQuantity" >
+            <input type="checkbox" value="" class="food form-check-input" id="bigStackCheckbox" data-price="1.99">
+            <label class="form-check-label" for="burgerMenu">
+              £1.99
+            </label> <br> </br>
+            </div>
+          </div>
+
+            <div class="card">
+            <div class="card-body div" id="fillet">
+            <span id="filletLabel">Fillet Burger</span>
+            <input type="numeric"  value="1" class="form-control food" id="filletQuantity" >
+            <input type="checkbox" value="" class="food form-check-input" id="filletCheckbox" data-price="1.99">
+            <label class="form-check-label" for="burgerMenu">
+              £1.99
+            </label> <br> </br>
+            </div>
+          </div>
+
+            <div class="card">
+            <div class="card-body div" id="periBurger">
+            <span id ="periBurgerLabel">Peri Peri Burger</span>
+            <input  type="numeric"  value="1" class="form-control food" id="periBurgerQuantity" >
+            <input type="checkbox" value="" class="food form-check-input" id="periBurgerCheckbox" data-price="1.99">
+            <label class="form-check-label" for="friedMenu">
+              £1.99
+            </label> <br> </br>
+            </div>
+          </div>
+
+            <div class="card">
+            <div class="card-body div" id="halfPounder">
+            <span id="halfPounderLabel">Half Pounder</span>
+            <input  type="numeric"  value="1" class="form-control food" id="halfPounderQuantity" >
+            <input type="checkbox" value="" class="food form-check-input" id="halfPounderCheckbox" data-price="1.99">
+            <label class="form-check-label" for="burgerMenu">
+              £1.99
+            </label> <br> </br>
+            </div>
+          </div>
+          </div>
+          <div class="card" style="display: none; margin-bottom:20px; margin-left: 10px; margin-right: 10px;" id="submitOrder">
+          <button id="saveOrder"  class="btn btn-primary">Save</button>
+          </div>
+        </div>
+	   </div>
+     </div>
+
+	  <div class="col-4 d-flex">
+        <div class="card flex-fill listItems">
+          <div class="card-header"> 
+            Items
+          </div>
+            <div id="itemsList">
+              <div class="card-body">
+            <div id="addItem"></div>
+          </div>
+          </div>
+        </div>
+	   </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+     
+    </div>
+  </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" ></script>
+<script type="text/javascript" src="../Scripts/orderPage.js"></script>
+
+<nav class="navbar navbar-dark bg-dark p-0" style=" margin-top: 40px;">
+  <span class="navbar-brand mb-0 h1 p-3 ms-auto">
+  </span>
+</nav>
+
+
+</body>
+</html>
